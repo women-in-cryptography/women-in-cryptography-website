@@ -21,8 +21,8 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <style>
     @font-face {
-      font-family: "QuantumRegular";
-      src: url("assets/Quantum.otf");
+      font-family: "Pixel";
+      src: url("assets/Pixel.ttf");
     }
 
     * {
@@ -56,8 +56,19 @@
       }
     }
 
+    .menu {
+		  padding: 1rem;
+			padding-right: 3rem;
+			text-align: right;
+		}
+
+		.menu-link {
+		  color: #FAF5FF;
+			font-weight: 800;
+		}
+
     .wrapper {
-			margin-top: 10rem;
+			margin-top: 5rem;
 			border: 5px solid #463157;
 		}
 
@@ -84,17 +95,7 @@
       display: block;
       border-top: solid 5px #000000;
       padding: 2rem;
-    }
-
-    #main-logo {
-      padding-left: 200px;
-      width: 60%;
-    }
-
-    @media only screen and (max-width: 600px) {
-      #main-logo {
-        visibility: hidden;
-      }
+		  display: flex;
     }
 
     #main-title {
@@ -104,84 +105,26 @@
     }
 
     #main-description {
-      font-size: 40px;
+		  font-family: 'Pixel';
+      font-size: 50px;
       font-weight: 200;
       margin: 0;
     }
 
     #main-text {
-      font-size: 25px;
-      font-weight: 200;
       text-align: right;
-      margin: 0;
+      margin-top: 5rem;
     }
 
-    .fixed_headers {
-      width: 750px;
-      table-layout: fixed;
-      border-collapse: collapse;
-      margin-left: 120px;
-    }
+    .footer-col-wrapper {
+		  padding: 2rem;
+      font-size: 25px;
+		}
 
-    .fixed_headers th,
-    .fixed_headers td {
-      text-align: left;
-      padding: 10px;
-      border-bottom: 2px solid #d3d3d3;
-      border-right: 2px solid #d3d3d3;
-    }
+		.copyright {
+      font-size: 15px;
+		}
 
-    .fixed_headers thead {
-      background-color: #d3d3d3;
-      display: table-header-group;
-    }
-
-    .fixed_headers thead tr {
-      display: block;
-      position: relative;
-    }
-
-    .fixed_headers tbody {
-      display: block;
-      overflow: auto;
-    }
-
-    .faq-question {
-      text-align: left;
-    }
-
-    .faq-question label {
-      cursor: pointer;
-    }
-
-    .faq-question label:hover {
-      color: #faae41;
-    }
-
-    .faq-question label:after {
-      vertical-align: super;
-      display: inline-block;
-    }
-
-    .faq-question input[type="checkbox"] {
-      display: none;
-      visibility: hidden;
-    }
-
-    .faq-question #toggle_1:checked~label::after {
-      vertical-align: middle;
-    }
-
-    .faq-question #toggle_1:checked~#expand_1 {
-      overflow: hidden;
-      transition: height 0.5s;
-      height: 0;
-      padding: 0;
-    }
-
-    .faq-question #expand_1 {
-      height: auto;
-    }
   </style>
   {% feed_meta %}
 </head>

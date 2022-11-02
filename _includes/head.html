@@ -4,7 +4,7 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta charset="utf-8">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="Sofía Celi">
+  <meta name="author" content="Women in Cryptography">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="Cryptography, Workshop">
 
@@ -18,6 +18,8 @@
   <meta property="og:title" content="Women in Cryptography" />
   <meta property="og:description" content="Women in Cryptography" />
 
+  <link rel='shortcut icon' type='image/x-icon' href="{{ site.baseurl }}/images/favicon.ico" />
+  <link rel='shortcut icon' type='image/x-icon' href="{{ site.baseurl }}/images/favicon_32.ico" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <style>
     @font-face {

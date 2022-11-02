@@ -1,6 +1,7 @@
 <header class="site-header">
     <div class="wrapper">
       <div class="menu">
+          <a class="menu-link" href="{{ site.baseurl }}/" title="Home">Home</a>
           {% for page in site.pages %}
             {% if page.tags == "menu" %}
               <a class="menu-link" href="{{ page.url | prepend: site.baseurl }}" >{{ page.title }}</a>

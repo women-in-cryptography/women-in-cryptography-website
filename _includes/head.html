@@ -151,10 +151,40 @@
 
 		.regular-description {
 		  background-color: white;
-      display: block;
+      display: none;
       padding: 1.5rem;
     }
 
+    .toggle {
+      display: none;
+    }
+
+    .collapsible-btn {
+      cursor: pointer;
+      display: block;
+      padding: 1rem;
+      background-color: #f1f1f1;
+      margin: 0.5rem 0;
+		  border: 7px solid #000000;
+    }
+
+    .regular-description-fixed {
+      display: block;
+      padding: 1.5rem;
+      background-color: white;
+		  border: 7px solid #000000;
+      margin-top: 1.5rem;
+    }
+
+    .regular-description {
+      display: none;
+      padding: 1.5rem;
+      background-color: white;
+    }
+
+  .toggle:checked + .collapsible-btn + .regular-description {
+    display: block;
+  }
 
     #main-text {
       text-align: right;

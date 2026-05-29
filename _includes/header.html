@@ -1,13 +1,36 @@
 <header class="site-header">
     <div class="wrapper">
-      <div class="menu">
-          <a class="menu-link" href="{{ site.baseurl }}/" title="Home">Home</a>
-          {% for page in site.pages %}
-            {% if page.tags == "menu" %}
-              <a class="menu-link" href="{{ page.url | prepend: site.baseurl }}" >{{ page.title }}</a>
-            {% endif %}
-          {% endfor %}
-      </div>
+<div class="menu">
+  <a class="menu-link" href="{{ site.baseurl }}/" title="Home">Home</a>
+
+  {% for page in site.pages %}
+    {% if page.tags == "menu" %}
+      <a class="menu-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+    {% endif %}
+  {% endfor %}
+
+  <div class="dropdown">
+	  <span class="menu-link dropdown-label" tabindex="0">Events</span>
+    <div class="dropdown-menu">
+      {% for page in site.pages %}
+        {% if page.tags == "events" %}
+          <a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
+	  <span class="menu-link dropdown-label" tabindex="0">Documentation</span>
+    <div class="dropdown-menu">
+      {% for page in site.pages %}
+        {% if page.tags == "docs" %}
+          <a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
     </div>
 		<hr class="line">
 </header>

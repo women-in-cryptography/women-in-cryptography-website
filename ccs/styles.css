@@ -238,10 +238,7 @@ a {
   object-fit: cover;
   display: block;
   border: var(--border-w) solid var(--ink);
-  box-shadow: var(--shadow);
-  transition: transform .14s ease;
 }
-@media (hover: hover) { .gallery__img:hover { transform: translate(-3px, -3px); } }
 
 .site-footer .wrapper {
   margin-top: 0;

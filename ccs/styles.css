@@ -237,17 +237,37 @@ a {
   margin-bottom: 0;
 }
 
-.toggle { display: none; }
+.toggle {
+  display: none;
+}
 .collapsible-btn {
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 1rem;
+  margin-top: 1.5rem;
   background: var(--yellow);
   border: var(--border-w) solid var(--ink);
   box-shadow: var(--shadow);
   font-weight: 700;
-  margin-top: 1.5rem;
 }
+.collapsible-btn h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.collapsible-btn::after {
+  content: "+";
+  flex: none;
+  font-family: 'Pixel', monospace;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.toggle:checked + .collapsible-btn::after {
+  content: "–";
+}
+
 .regular-description {
   display: none;
   padding: 1.5rem;
@@ -258,6 +278,7 @@ a {
   border: var(--border-w) solid var(--ink);
   border-top: 0;
 }
+
 
 .gallery {
   display: grid;
@@ -341,9 +362,13 @@ a {
   float: right;
   font-family: 'Pixel', monospace;
 }
-.toggle:checked + .collapsible-btn::after { content: "–"; }
+.toggle:checked + .collapsible-btn::after {
+  content: "–";
+}
 
-.coc h2.tag { margin-top: 0.5rem; }
+.coc h2.tag {
+  margin-top: 0.5rem;
+}
 .coc-section {
   font-size: 1.6rem;
   margin: 2rem 0 1rem;
@@ -372,10 +397,19 @@ a {
   position: relative; z-index: 100;
 }
 
-.dropdown { position: relative; display: inline-block; }
-.dropdown-label { cursor: default; }
-.dropdown-label::after { content: " ▾"; }
-.dropdown:hover .dropdown-label::after { content: " ▴"; }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-label {
+  cursor: default;
+}
+.dropdown-label::after {
+  content: " ▾";
+}
+.dropdown:hover .dropdown-label::after {
+  content: " ▴";
+}
 
 .dropdown-menu {
   display: none;
@@ -402,21 +436,26 @@ a {
   font-weight: 700;
   border-bottom: var(--border-thin) solid var(--ink);
 }
-.dropdown-item:last-child { border-bottom: 0; }
-.dropdown-item:hover { background: var(--yellow); }
+.dropdown-item:last-child {
+  border-bottom: 0;
+}
+.dropdown-item:hover {
+  background: var(--yellow);
+}
 
 @keyframes nb-fade { from { opacity: 0; } to { opacity: 1; } }
 
 .wrapper,
 .main-description,
-.important-box,
 .regular-description-fixed { animation: nb-fade .5s ease both; }
 .main-description          { animation-delay: .08s; }
-.important-box             { animation-delay: .16s; }
 .regular-description-fixed { animation-delay: .24s; }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 

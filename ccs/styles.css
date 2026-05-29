@@ -142,7 +142,11 @@ a {
   background: var(--yellow);
   border: var(--border-w) solid var(--ink);
 }
-@media only screen and (max-width: 600px) { .accent-square { display: none; } }
+@media only screen and (max-width: 600px) {
+  .accent-square {
+    width: 34px; height: 34px;
+  }
+}
 
 /* logo and intro text row */
 .main-description {
@@ -166,13 +170,45 @@ a {
   margin: 0;
   padding-left: 50px;
 }
-@media only screen and (max-width: 600px) { #main-description { font-size: 1.4rem; } }
-@media only screen and (max-width: 360px) { #main-description { font-size: 1.1rem; } }
+@media only screen and (max-width: 600px) {
+  #main-description {
+    font-size: 1.1rem;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #main-description {
+    font-size: 1.1rem;
+    padding-left: 0;
+  }
+}
 
-#regular-title { font-size: 50px; font-weight: 200; margin: 0; }
+#regular-title {
+  font-size: clamp(28px, 6vw, 50px);
+  font-weight: 200;
+  margin: 0;
+  word-wrap: break-word;
+}
 
-#main-text { text-align: right; margin: 0; }
-@media only screen and (max-width: 600px) { #main-text { text-align: initial; } }
+#main-text {
+  text-align: right;
+  margin: 0;
+}
+@media only screen and (max-width: 600px) {
+  #main-text {
+    text-align: initial;
+    }
+}
+
+.feature-img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  flex: none;
+}
+@media only screen and (max-width: 600px) {
+  .feature-img { width: 90%; }
+}
 
 .tag {
   display: inline-block;

@@ -10,6 +10,17 @@
   {% endfor %}
 
   <div class="dropdown">
+	  <span class="menu-link dropdown-label" tabindex="0">Join us!</span>
+    <div class="dropdown-menu">
+      {% for page in site.pages %}
+        {% if page.tags == "join" %}
+          <a class="dropdown-item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="dropdown">
 	  <span class="menu-link dropdown-label" tabindex="0">Events</span>
     <div class="dropdown-menu">
       {% for page in site.pages %}
